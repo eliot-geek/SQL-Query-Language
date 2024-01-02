@@ -6,7 +6,8 @@
 
 ### 2. Write a request to select the 5 most expensive courses, which have more than 4 students, and which last more than 10 hours.
 ![](images/23.png)
-![](images/23 1.png)
+
+![](images/23a.png)
 
 ### 3. Write one (!) query that will simultaneously display a list of the names of the three youngest students, the names of the three oldest teachers and the names of the three longest courses.
 ![](images/24.png)
