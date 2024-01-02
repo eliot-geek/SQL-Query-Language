@@ -23,6 +23,7 @@
 
 ## Example: an online bookstore
 ![Example: an online bookstore](images/7.png)
+
 ![Example: an online bookstore](images/8.png)
 
 ## Terminology
