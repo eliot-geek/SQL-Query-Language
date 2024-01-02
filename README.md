@@ -4,7 +4,7 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 
 ## Topics Covered
 
-- **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
+- ### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
 ```
 VARCHAR - Save lines (char)
@@ -24,7 +24,7 @@ DESCRIBE subscriptions;
 
 ```
 
-- **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
+- ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
 ```
 a-SELECT b-FROM c-WHERE d-ORDERBY e-LIMIT
@@ -48,7 +48,7 @@ mysql> SELECT name FROM students
 SELECT age, name FROM Teachers UNION ALL Select age, name FROM students;
 ```
 
-- **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
+- ### **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
 
 ```
 SELECT salary, salary * 12 FROM teachers LIMIT 10;
@@ -64,7 +64,7 @@ SELECT AVG(duration), MAX(students_count), MAX(price) FROM courses;
 SELECT SUM(duration) AS total_duration FROM courses WHERE type = "MARKETING";
 ```
 
-- **Relationships and Table Joins**: Understand relationships and perform table joins for comprehensive data retrieval.
+- ### **Relationships and Table Joins**: Understand relationships and perform table joins for comprehensive data retrieval.
 
 ```
 SELECT * FROM courses LIMIT 1\G
@@ -87,7 +87,7 @@ mysql> SELECT Courses.name AS course_name,
     -> ORDER BY subscription_date LIMIT 10;
 ```
 
-- **Grouping**: Master data grouping techniques for effective analysis.
+- ### **Grouping**: Master data grouping techniques for effective analysis.
 
 ```
 SELECT type, AVG(price) FROM Courses GROUP BY type;
@@ -103,7 +103,7 @@ mysql> SELECT Teachers.name AS teacher_name, COUNT(*) AS course_count FROM Cours
     -> ORDER BY COUNT(*) DESC LIMIT 5;
 ```
 
-- **Data Modification**: Explore data modification operations to update and manipulate database content.
+- ### **Data Modification**: Explore data modification operations to update and manipulate database content.
 
 ```
 INSERT INTO Courses (name, duration, price, teacher_id) VALUES("SQL", 2, 99999, 2);
@@ -120,13 +120,13 @@ SELECT type, AVG(price) FROM Courses GROUP BY type;
 
 ```
 
-- **Subqueries**: Learn the concept of subqueries for advanced data retrieval.
+- ### **Subqueries**: Learn the concept of subqueries for advanced data retrieval.
 
 ```
 SELECT name, (SELECT COUNT(*) FROM Teachers WHERE Teachers.age > Students.age) AS older_count FROM Students ORDER BY older_count DESC LIMIT 10;
 ```
 
-- **Declaration and Modification of Data Structure**: Understand data structure declaration and modification.
+- ### **Declaration and Modification of Data Structure**: Understand data structure declaration and modification.
 
 ```
 mysql> CREATE TABLE PurchaseList (
