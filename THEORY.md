@@ -40,9 +40,14 @@
 ![Non-relational databases (NoSQL)](images/13.png)
 ![Non-relational databases (NoSQL)](images/14.png)
 
-![Non-relational databases (NoSQL)](images/15.png)
-![Non-relational databases (NoSQL)](images/16.png)
-![Non-relational databases (NoSQL)](images/17.png)
+## Formats for storing data in NoSQL databases
+![Formats for storing data in NoSQL databases](images/15.png)
+
+## Formats for storing data in NoSQL databases
+![Formats for storing data in NoSQL databases](images/16.png)
+
+## Key—value pairs
+![Key—value pairs](images/17.png)
 ![Non-relational databases (NoSQL)](images/18.png)
 ![Non-relational databases (NoSQL)](images/19.png)
 ![Non-relational databases (NoSQL)](images/20.png)
