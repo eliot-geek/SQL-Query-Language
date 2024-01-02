@@ -48,31 +48,17 @@
 
 ## Key—value pairs
 ![Key—value pairs](images/17.png)
-![Non-relational databases (NoSQL)](images/18.png)
-![Non-relational databases (NoSQL)](images/19.png)
-![Non-relational databases (NoSQL)](images/20.png)
-![Non-relational databases (NoSQL)](images/21.png)
 
+## Formats for storing data in NoSQL databases
+![Formats for storing data in NoSQL databases](images/18.png)
 
+## JSON documents
+![JSON documents](images/19.png)
 
+## Document-oriented databases
+![Document-oriented databases](images/20.png)
 
+## Formats for storing data in NoSQL databases
+![Formats for storing data in NoSQL databases](images/21.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Happy querying! 🚀
