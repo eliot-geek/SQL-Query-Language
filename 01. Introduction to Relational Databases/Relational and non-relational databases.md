@@ -5,6 +5,7 @@
 
 ## Concept of a Database
 > Explore the fundamental concept of a database
+
 ![Database](../images/2.png)
 
 ## Types of Databases
