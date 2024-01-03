@@ -3,10 +3,12 @@
 ## Relational and non-relational databases
 ![Relational and non-relational databases](../images/1.png)
 
-## Database
+## Concept of a Database
+Explore the fundamental concept of a database
 ![Database](../images/2.png)
 
-## Database
+## Types of Databases
+Learn about different types of databases.
 ![Database](../images/3.png)
 
 ## Relational databases
