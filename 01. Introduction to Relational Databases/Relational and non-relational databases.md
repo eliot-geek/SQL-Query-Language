@@ -42,6 +42,10 @@
 > Introduction to key terms in the database domain.
 
 ![Terminology](../images/9.png)
+
+## Terminology
+> Introduction to key terms in the database domain.
+
 ![Terminology](../images/10.png)
 
 ## SQL Concept
@@ -75,6 +79,8 @@
 ![Key-Value Pairs](../images/16.png)
 
 ## Key—value pairs - Code With Redis 
+> Understanding data storage using key-value pairs.
+
 ![Key—value pairs](../images/17.png)
 
 ## Data Storage Formats in NoSQL Databases
