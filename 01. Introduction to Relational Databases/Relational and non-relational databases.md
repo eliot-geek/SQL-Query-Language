@@ -23,50 +23,78 @@
 
 ![Example: an online bookstore](../images/5.png)
 
-## Example: an online bookstore
-![Example: an online bookstore](../images/5.png)
+## Challenges
+> Discuss common challenges in database management.
 
-## Problems
 ![Problems](../images/6.png)
 
-## Example: an online bookstore
+## Example: Online Bookstore
+> Illustration of concepts using an example of an online bookstore.
+
 ![Example: an online bookstore](../images/7.png)
+
+## Continuing the Example Analysis
+> Further exploration of the online bookstore example.
 
 ![Example: an online bookstore](../images/8.png)
 
 ## Terminology
+> Introduction to key terms in the database domain.
+
 ![Terminology](../images/9.png)
 ![Terminology](../images/10.png)
 
-## SQL Query Language
+## SQL Concept
+> Understanding the role and significance of SQL (Structured Query Language).
+
 ![SQL Query Language](../images/11.png)
 
-## Relational databases
+## Types of Relational Databases
+> Exploration of various types of relational databases.
+
 ![Relational databases](../images/12.png)
 
-## Non-relational databases (NoSQL)
+## Non-Relational Databases (NoSQL)
+> An overview of non-relational databases and the NoSQL paradigm.
+
 ![Non-relational databases (NoSQL)](../images/13.png)
+
+## Data Storage Formats in NoSQL Databases
+> Explore different data storage formats used in NoSQL databases.
+
 ![Non-relational databases (NoSQL)](../images/14.png)
 
-## Formats for storing data in NoSQL databases
-![Formats for storing data in NoSQL databases](../images/15.png)
+## Key-Value Pairs
+> Understanding data storage using key-value pairs.
 
-## Formats for storing data in NoSQL databases
-![Formats for storing data in NoSQL databases](../images/16.png)
+![Key-Value Pairs](../images/15.png)
 
-## Key—value pairs
+## Key-Value Pairs - Examples
+> Understanding data storage using key-value pairs.
+
+![Key-Value Pairs](../images/16.png)
+
+## Key—value pairs - Code With Redis 
 ![Key—value pairs](../images/17.png)
 
-## Formats for storing data in NoSQL databases
+## Data Storage Formats in NoSQL Databases
+> Explore different data storage formats used in NoSQL databases.
+
 ![Formats for storing data in NoSQL databases](../images/18.png)
 
-## JSON documents
+## JSON Documents
+> Insight into the usage of JSON documents in databases.
+
 ![JSON documents](../images/19.png)
 
-## Document-oriented databases
+## Document-Oriented Databases
+> Introduction to document-oriented databases.
+
 ![Document-oriented databases](../images/20.png)
 
-## Formats for storing data in NoSQL databases
+## Other Data Storage Formats in NoSQL Databases
+> Exploration of additional data storage formats in NoSQL databases.
+
 ![Formats for storing data in NoSQL databases](../images/21.png)
 
 Happy querying! 🚀
