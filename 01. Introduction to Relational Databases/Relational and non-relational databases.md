@@ -4,18 +4,23 @@
 ![Relational and non-relational databases](../images/1.png)
 
 ## Concept of a Database
-> Explore the fundamental concept of a database
+> Explore the fundamental concept of a database.
 
 ![Database](../images/2.png)
 
 ## Types of Databases
-Learn about different types of databases.
+> Learn about different types of databases.
+
 ![Database](../images/3.png)
 
-## Relational databases
+## Relational Databases
+> Understand the principles of relational databases.
+
 ![Relational databases](../images/4.png)
 
-## Example: an online bookstore
+## Example: Online Bookstore
+> Illustration of concepts using an example of an online bookstore.
+
 ![Example: an online bookstore](../images/5.png)
 
 ## Example: an online bookstore
