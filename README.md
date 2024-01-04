@@ -27,7 +27,7 @@ DESCRIBE subscriptions;
 
 - ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
-```
+
 a-SELECT b-FROM c-WHERE d-ORDERBY e-LIMIT
 
 SELECT column1, column2, ...
@@ -84,7 +84,7 @@ SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMIN
 -- Selecting all values from the "type" column in the "courses" table without removing duplicates. If there are duplicate values in the "type" column, this query will display each occurrence.
 SELECT type FROM courses;
 
-```
+
 
 ```
 SELECT DISTINCT type FROM courses;
