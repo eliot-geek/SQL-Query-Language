@@ -44,14 +44,13 @@ LIMIT number;
 - `ORDER BY`: Optional clause for sorting the results. It can be ascending (`ASC`) or descending (`DESC`).
 - `LIMIT`: Optional clause for restricting the number of rows returned.
 
-```
 The \G is specific to MySQL and isn't part of standard SQL. It's a helpful tool for more detailed, vertical display of the results. 
-
 -- Selecting specific columns (name and type) from the "courses" table
+```
 SELECT name, type FROM courses; or
 SELECT name, type FROM courses \G; or
 SELECT name FROM Courses;
-
+```
 -- Selecting all columns from the "students" table
 SELECT * FROM students; or with \G
 
