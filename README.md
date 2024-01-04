@@ -4,7 +4,7 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 
 ## Topics Covered
 
-- ### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
+### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
 ```
 VARCHAR     - Variable-length text.
@@ -25,7 +25,7 @@ DESCRIBE subscriptions;
 
 ```
 
-- ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
+### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
 ```
 a-SELECT b-FROM c-WHERE d-ORDERBY e-LIMIT
@@ -44,46 +44,56 @@ LIMIT number;
 - `ORDER BY`: Optional clause for sorting the results. It can be ascending (`ASC`) or descending (`DESC`).
 - `LIMIT`: Optional clause for restricting the number of rows returned.
 
-The \G is specific to MySQL and isn't part of standard SQL. It's a helpful tool for more detailed, vertical display of the results. 
--- Selecting specific columns (name and type) from the "courses" table
+- The \G is specific to MySQL and isn't part of standard SQL. It's a helpful tool for more detailed, vertical display of the results. 
+- Selecting specific columns (name and type) from the "courses" table
 ```
 SELECT name, type FROM courses; or
 SELECT name, type FROM courses \G; or
 SELECT name FROM Courses;
 ```
--- Selecting all columns from the "students" table
+- Selecting all columns from the "students" table
+```
 SELECT * FROM students; or with \G
-
--- Selecting all columns from the "courses" table where type is "PROGRAMMING" with detailed output
+```
+- Selecting all columns from the "courses" table where type is "PROGRAMMING" with detailed output
+```
 SELECT * FROM courses WHERE type = 'PROGRAMMING'; or with \G
-
--- Selecting the names of students whose age is greater than 35
+```
+- Selecting the names of students whose age is greater than 35
+```
 SELECT name FROM students WHERE age > 35;
-
--- Selecting all columns from the "teachers" table where the salary is greater than 20000
+```
+- Selecting all columns from the "teachers" table where the salary is greater than 20000
+```
 SELECT * FROM teachers WHERE salary > 20000;
-
--- Selecting all columns from the "teachers" table where the salary is greater than 20000 and the age is less than 30
+```
+- Selecting all columns from the "teachers" table where the salary is greater than 20000 and the age is less than 30
+```
 SELECT * FROM teachers WHERE salary > 20000 AND age < 30;
-
--- Selecting all columns from the "students" table and ordering the results by age in ascending order
+```
+- Selecting all columns from the "students" table and ordering the results by age in ascending order
+```
 SELECT * FROM students ORDER BY age;
-
--- Selecting all columns from the "students" table and ordering the results by age in descending order
+```
+- Selecting all columns from the "students" table and ordering the results by age in descending order
+```
 SELECT * FROM students ORDER BY age DESC;
-
--- Selecting all columns from the "teachers" table and ordering the results by age in descending order
+```
+- Selecting all columns from the "teachers" table and ordering the results by age in descending order
+```
 SELECT * FROM teachers ORDER BY age DESC;
-
--- Selecting all columns from the "teachers" table, ordering the results by age in descending order, and limiting the output to the first 3 rows
+```
+- Selecting all columns from the "teachers" table, ordering the results by age in descending order, and limiting the output to the first 3 rows
+```
 SELECT * FROM teachers ORDER BY age LIMIT 3;
-
--- Selecting the name, duration, price and students_count from courses where the type is "PROGRAMMING," ordering by price, and limiting to 3 rows:
+```
+- Selecting the name, duration, price and students_count from courses where the type is "PROGRAMMING," ordering by price, and limiting to 3 rows:
+```
 SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMING" ORDER BY price LIMIT 3;
-
--- Selecting all values from the "type" column in the "courses" table without removing duplicates. If there are duplicate values in the "type" column, this query will display each occurrence.
+```
+- Selecting all values from the "type" column in the "courses" table without removing duplicates. If there are duplicate values in the "type" column, this query will display each occurrence.
+```
 SELECT type FROM courses;
-
 ```
 
 - ### **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
