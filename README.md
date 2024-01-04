@@ -27,6 +27,7 @@ DESCRIBE subscriptions;
 
 - ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
+```
 
 a-SELECT b-FROM c-WHERE d-ORDERBY e-LIMIT
 
@@ -36,14 +37,13 @@ WHERE condition
 ORDER BY column1 [ASC | DESC], column2 [ASC | DESC], ...
 LIMIT number;
 
-- `SELECT`: Specifies the columns you want to retrieve data from.
-- `FROM`: Specifies the table from which to retrieve the data.
-- `WHERE`: Optional clause for filtering the results based on a specified condition.
-- `ORDER BY`: Optional clause for sorting the results. It can be ascending (`ASC`) or descending (`DESC`).
-- `LIMIT`: Optional clause for restricting the number of rows returned.
+SELECT: Specifies the columns you want to retrieve data from.
+FROM: Specifies the table from which to retrieve the data.
+WHERE: Optional clause for filtering the results based on a specified condition.
+ORDER BY: Optional clause for sorting the results. It can be ascending (ASC) or descending (DESC).
+LIMIT: Optional clause for restricting the number of rows returned.
 
-The `\G` is specific to MySQL and MariaDB command-line clients and isn't part of standard SQL.
-
+The \G is specific to MySQL and MariaDB command-line clients and isn't part of standard SQL.
 It's a helpful tool for better readability and for a more detailed, vertical display of the results. 
 
 -- Selecting specific columns (name and type) from the "courses" table
@@ -84,7 +84,7 @@ SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMIN
 -- Selecting all values from the "type" column in the "courses" table without removing duplicates. If there are duplicate values in the "type" column, this query will display each occurrence.
 SELECT type FROM courses;
 
-
+```
 
 ```
 SELECT DISTINCT type FROM courses;
