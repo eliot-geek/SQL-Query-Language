@@ -6,7 +6,7 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 
 - ### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
-```
+
 **VARCHAR:** Variable-length text.
 **INT:** Integer.
 **ENUM:** Predefined options.
@@ -23,7 +23,7 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 - **DESCRIBE students;:** Displays information about the structure of the "students" table.
 - **DESCRIBE subscriptions;:** Displays information about the structure of the "subscriptions" table.
 
-```
+
 
 - ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
