@@ -6,24 +6,24 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 
 - ### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
+```
+VARCHAR     - Variable-length text.
+INT         - Integer.
+ENUM        - Enumeration (Predefined options)
+DATETIME    - Date and time.
 
-**VARCHAR:** Variable-length text.
-**INT:** Integer.
-**ENUM:** Predefined options.
-**DATETIME:** Date and time.
+SHOW DATABASES;         - Lists available databases.
+USE [NAME DATABASE];    - Selects a specific database.
+SHOW TABLES;            - Lists tables in the selected database.
 
-- **SHOW DATABASES;** - Lists available databases.
-- **USE [NAME DATABASE];** - Selects a specific database.
-- **SHOW TABLES;** - Lists tables in the selected database.
+DESCRIBE - describe : Provides information about the structure of a database table
+DESCRIBE [table_name]; or DESCRIBE [table_name]\G (with more details)
+DESCRIBE courses;
+DESCRIBE teachers;
+DESCRIBE students;
+DESCRIBE subscriptions;
 
-- **DESCRIBE - describe:** Provides information about the structure of a database table.
-- **DESCRIBE [table_name]; or DESCRIBE [table_name]\G (with more details):** Describes the structure of the specified table. Using `\G` offers a more detailed, vertical display.
-- **DESCRIBE courses;:** Displays information about the structure of the "courses" table.
-- **DESCRIBE teachers;:** Displays information about the structure of the "teachers" table.
-- **DESCRIBE students;:** Displays information about the structure of the "students" table.
-- **DESCRIBE subscriptions;:** Displays information about the structure of the "subscriptions" table.
-
-
+```
 
 - ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
