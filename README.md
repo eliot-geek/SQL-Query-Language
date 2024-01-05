@@ -6,7 +6,7 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 
 ### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
-```sql
+```
 VARCHAR     - Variable-length text.
 INT         - Integer.
 ENUM        - Enumeration (Predefined options)
@@ -28,8 +28,6 @@ DESCRIBE subscriptions;
 ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
 ```sql
-a-SELECT b-FROM c-WHERE d-ORDERBY e-LIMIT
-
 SELECT column1, column2, ...
 FROM table
 WHERE condition
@@ -46,64 +44,64 @@ LIMIT number;
 
 - The \G is specific to MySQL and isn't part of standard SQL. It's a helpful tool for more detailed, vertical display of the results. 
 - Selecting specific columns (name and type) from the "courses" table
-```
+```sql
 SELECT name, type FROM courses; or
 SELECT name, type FROM courses \G; or
 SELECT name FROM Courses;
 ```
 - Selecting all columns from the "students" table
-```
+```sql
 SELECT * FROM students; or with \G
 ```
 - Selecting all columns from the "courses" table where type is "PROGRAMMING" with detailed output
-```
+```sql
 SELECT * FROM courses WHERE type = 'PROGRAMMING'; or with \G
 ```
 - Selecting the names of students whose age is greater than 35
-```
+```sql
 SELECT name FROM students WHERE age > 35;
 ```
 - Selecting all columns from the "teachers" table where the salary is greater than 20000
-```
+```sql
 SELECT * FROM teachers WHERE salary > 20000;
 ```
 - Selecting all columns from the "teachers" table where the salary is greater than 20000 and the age is less than 30
-```
+```sql
 SELECT * FROM teachers WHERE salary > 20000 AND age < 30;
 ```
 - Selecting all columns from the "students" table and ordering the results by age in ascending order
-```
+```sql
 SELECT * FROM students ORDER BY age;
 ```
 - Selecting all columns from the "students" table and ordering the results by age in descending order
-```
+```sql
 SELECT * FROM students ORDER BY age DESC;
 ```
 - Selecting all columns from the "teachers" table and ordering the results by age in descending order
-```
+```sql
 SELECT * FROM teachers ORDER BY age DESC;
 ```
 - Selecting all columns from the "teachers" table, ordering the results by age in descending order, and limiting the output to the first 3 rows
-```
+```sql
 SELECT * FROM teachers ORDER BY age LIMIT 3;
 ```
 - Selecting the name, duration, price and students_count from courses where the type is "PROGRAMMING," ordering by price, and limiting to 3 rows:
-```
+```sql
 SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMING" ORDER BY price LIMIT 3;
 ```
 - Selecting all values from the "type" column in the "courses" table without removing duplicates. If there are duplicate values in the "type" column, this query will display each occurrence.
-```
+```sql
 SELECT type FROM courses;
 ```
 ### **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
   
 - Displays unique values from the "type" column in "courses," removing duplicates.
-```
+```sql
 SELECT DISTINCT type FROM courses;
 ```
 - Displays unique values from the "duration" column in "courses," removing duplicates.
 
-```
+```sql
 SELECT DISTINCT duration FROM courses;
 ```
 
@@ -113,7 +111,7 @@ SELECT DISTINCT duration FROM courses;
 
 The basic syntax for a `UNION` operation looks like this:
 
-```
+```sql
 SELECT column1, column2, ...
 FROM table1
 WHERE condition
@@ -124,24 +122,24 @@ WHERE condition;
 ```
 
 - Combines and displays unique names from the "students" and "teachers" tables, removing duplicates.
-```
+```sql
 mysql> SELECT name FROM students
     -> UNION
     -> SELECT name FROM teachers;
 ```
 - Retrieves and combines age and name information from the "Teachers" and "students" tables, including duplicates using UNION ALL.
-```
+```sql
 SELECT age, name FROM Teachers UNION ALL SELECT age, name FROM students;
 ```
 
 ### **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
 
 - Selects the salary and the calculated annual salary (salary * 12) from the "Teachers" table for the first 10 records.
-```
+```sql
 SELECT salary, salary * 12 FROM teachers LIMIT 10;
 ```
 - Selects the salary as monthly_salary and the calculated annual salary (salary * 12) as annual_salary from the "Teachers" table for the first 10 records.
-```
+```sql
 SELECT salary AS monthly_salary, salary * 12 AS annual_salary FROM teachers LIMIT 10;
 ```
 
@@ -150,18 +148,18 @@ SELECT salary AS monthly_salary, salary * 12 AS annual_salary FROM teachers LIMI
 - `AS annual_salary`: Renames the result of the expression `salary * 12` as "annual_salary."
 
 - Selects the difference in days between the current date and the registration date as days_since_registration for the first 10 records from the "Students" table.
-```
+```sql
 SELECT DATEDIFF(NOW(), registration_date) AS days_since_registration FROM students LIMIT 10;
 ```
 - The `DATEDIFF` function in SQL is used to calculate the difference between two dates.
 - `DATEDIFF(NOW(), registration_date)`: Calculates the difference in days between the current date (`NOW()`) and the "registration_date" column for each record in the "students" table.
 
 - Selects the registration date and the difference in days between the current date and the registration date as days_since_registration for the first 10 records from the "Students" table.
-```
+```sql
 SELECT registration_date, DATEDIFF(NOW(), registration_date) AS days_since_registration FROM students LIMIT 10;
 ```
 - Selects the name and assigns a status ("FULL" or "NOT FULL") based on the students_count from the "Courses" table for the first 10 records.
-```
+```sql
 SELECT name, IF(students_count > 500, "FULL", "NOT FULL") AS status FROM courses LIMIT 10;
 ```
 
@@ -172,18 +170,18 @@ SELECT name, IF(students_count > 500, "FULL", "NOT FULL") AS status FROM courses
 - The result of this conditional expression is then aliased as "status" in the output.
 
 - Selects the name and assigns a status ("FULL" or "NOT FULL") based on the students_count from the "Courses" table for the first 10 records.
-```
+```sql
 SELECT name, IF(students_count > 100, "FULL", "NOT FULL") AS Status FROM courses LIMIT 10;
 ```
 
 - Concatenates a message about a new course, including its name, duration, and price from the "Courses" table for the first 3 records.
-```
+```sql
 SELECT CONCAT("Please buy our new course '", name , "' it's only " , duration , " hours long, and the price as low ", price, " rub.") FROM courses LIMIT 3;
 ```
 - The `CONCAT` function is used to concatenate or combine multiple strings into a single string.
 
 - Counts the total number of records in the "Students" table.
-```
+```sql
 SELECT COUNT(*) FROM students;
 ```
 - The `COUNT(*)` function is used to count the number of rows in a table.
@@ -191,7 +189,7 @@ SELECT COUNT(*) FROM students;
 - However, when `COUNT(*)` is used, it counts all rows, regardless of the values in any specific column.
 
 - Calculates the average age of students from the "Students" table.
-```
+```sql
 SELECT AVG(age) FROM students;
 ```
 - The `AVG` function is used to calculate the average (mean) value of a numeric column.
@@ -207,7 +205,7 @@ SELECT AVG(duration), MAX(students_count), MAX(price) FROM courses;
 - So, it is calculating the maximum value for both the "students_count" and "price" columns independently. It is not calculating the sum of all prices; rather, it identifies the highest value present in the "price" column.
 
 - Calculates the total duration of courses with the type "MARKETING" from the "Courses" table.
-```
+```sql
 SELECT SUM(duration) AS total_duration FROM courses WHERE type = "MARKETING";
 ```
 
