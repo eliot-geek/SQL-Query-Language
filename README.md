@@ -97,14 +97,15 @@ SELECT type FROM courses;
 ```
 
 - ### **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
-
-```
+  
 - Displays unique values from the "type" column in "courses," removing duplicates.
 ```
 SELECT DISTINCT type FROM courses;
 ```
 - Displays unique values from the "duration" column in "courses," removing duplicates.
-```SELECT DISTINCT duration FROM courses;
+
+```
+SELECT DISTINCT duration FROM courses;
 ```
 - Combines and displays unique names from the "students" and "teachers" tables, removing duplicates.
 ```
