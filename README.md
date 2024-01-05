@@ -6,7 +6,7 @@ Welcome to the SQL Training repository! This repository is dedicated to providin
 
 ### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
-```
+```sql
 VARCHAR     - Variable-length text.
 INT         - Integer.
 ENUM        - Enumeration (Predefined options)
@@ -27,7 +27,7 @@ DESCRIBE subscriptions;
 
 ### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
-```
+```sql
 a-SELECT b-FROM c-WHERE d-ORDERBY e-LIMIT
 
 SELECT column1, column2, ...
