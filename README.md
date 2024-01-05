@@ -95,8 +95,7 @@ SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMIN
 ```
 SELECT type FROM courses;
 ```
-
-- ### **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
+### **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
   
 - Displays unique values from the "type" column in "courses," removing duplicates.
 ```
@@ -107,6 +106,23 @@ SELECT DISTINCT type FROM courses;
 ```
 SELECT DISTINCT duration FROM courses;
 ```
+
+### **UNION Query**: is used to combine the result sets of two or more SELECT statements. It is used to merge the rows from different tables or queries into a single result set.  
+- It's important to note that `UNION` eliminates duplicate rows from the final result set. If you want to include duplicate rows, you can use the `UNION ALL` operator instead.
+- `UNION ALL` includes all rows, even if they are duplicates.
+
+The basic syntax for a `UNION` operation looks like this:
+
+```
+SELECT column1, column2, ...
+FROM table1
+WHERE condition
+UNION
+SELECT column1, column2, ...
+FROM table2
+WHERE condition;
+```
+
 - Combines and displays unique names from the "students" and "teachers" tables, removing duplicates.
 ```
 mysql> SELECT name FROM students
