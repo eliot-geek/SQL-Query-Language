@@ -199,7 +199,7 @@ SELECT AVG(age) FROM students;
 - It helps in analyzing the central tendency of the data, providing a single value that represents the "typical" or "average" value of the specified numeric column across all records in the table.
 
 - Calculates the average duration, maximum students_count, and maximum price from the "Courses" table.
-```s
+```sql
 SELECT AVG(duration), MAX(students_count), MAX(price) FROM courses;
 ```
 - `MAX(students_count)`: This part of the query calculates the maximum value in the "students_count" column of the "courses" table.
