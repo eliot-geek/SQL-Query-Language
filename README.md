@@ -136,17 +136,78 @@ SELECT age, name FROM Teachers UNION ALL SELECT age, name FROM students;
 
 ### **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
 
+- Selects the salary and the calculated annual salary (salary * 12) from the "Teachers" table for the first 10 records.
 ```
 SELECT salary, salary * 12 FROM teachers LIMIT 10;
+```
+- Selects the salary as monthly_salary and the calculated annual salary (salary * 12) as annual_salary from the "Teachers" table for the first 10 records.
+```
 SELECT salary AS monthly_salary, salary * 12 AS annual_salary FROM teachers LIMIT 10;
+```
+
+- The `AS` keyword is used to alias or rename a column or a table. 
+- `AS monthly_salary`: Renames the "salary" column as "monthly_salary."
+- `AS annual_salary`: Renames the result of the expression `salary * 12` as "annual_salary."
+
+- Selects the difference in days between the current date and the registration date as days_since_registration for the first 10 records from the "Students" table.
+```
 SELECT DATEDIFF(NOW(), registration_date) AS days_since_registration FROM students LIMIT 10;
+```
+- The `DATEDIFF` function in SQL is used to calculate the difference between two dates.
+- `DATEDIFF(NOW(), registration_date)`: Calculates the difference in days between the current date (`NOW()`) and the "registration_date" column for each record in the "students" table.
+
+- Selects the registration date and the difference in days between the current date and the registration date as days_since_registration for the first 10 records from the "Students" table.
+```
 SELECT registration_date, DATEDIFF(NOW(), registration_date) AS days_since_registration FROM students LIMIT 10;
+```
+- Selects the name and assigns a status ("FULL" or "NOT FULL") based on the students_count from the "Courses" table for the first 10 records.
+```
 SELECT name, IF(students_count > 500, "FULL", "NOT FULL") AS status FROM courses LIMIT 10;
+```
+
+- The `IF` function is a conditional expression. It works as follows:
+- `IF(students_count > 500, "FULL", "NOT FULL")`: This expression checks if the value in the "students_count" column for each record is greater than 500.
+  - If the condition is true, it returns the string "FULL."
+  - If the condition is false, it returns the string "NOT FULL."
+- The result of this conditional expression is then aliased as "status" in the output.
+
+- Selects the name and assigns a status ("FULL" or "NOT FULL") based on the students_count from the "Courses" table for the first 10 records.
+```
 SELECT name, IF(students_count > 100, "FULL", "NOT FULL") AS Status FROM courses LIMIT 10;
+```
+
+- Concatenates a message about a new course, including its name, duration, and price from the "Courses" table for the first 3 records.
+```
 SELECT CONCAT("Please buy our new course '", name , "' it's only " , duration , " hours long, and the price as low ", price, " rub.") FROM courses LIMIT 3;
+```
+- The `CONCAT` function is used to concatenate or combine multiple strings into a single string.
+
+- Counts the total number of records in the "Students" table.
+```
 SELECT COUNT(*) FROM students;
+```
+- The `COUNT(*)` function is used to count the number of rows in a table.
+- The `COUNT(*)` function is commonly used to retrieve the total count of records in a table. If you want to count the number of non-null values in a specific column, you can use `COUNT(column_name)` instead, where `column_name` is the name of the column you want to count.
+- However, when `COUNT(*)` is used, it counts all rows, regardless of the values in any specific column.
+
+- Calculates the average age of students from the "Students" table.
+```
 SELECT AVG(age) FROM students;
+```
+- The `AVG` function is used to calculate the average (mean) value of a numeric column.
+- The `AVG` function is commonly used to obtain the average value of a numeric column, such as age, salary, or any other numerical attribute in a dataset.
+- It helps in analyzing the central tendency of the data, providing a single value that represents the "typical" or "average" value of the specified numeric column across all records in the table.
+
+- Calculates the average duration, maximum students_count, and maximum price from the "Courses" table.
+```s
 SELECT AVG(duration), MAX(students_count), MAX(price) FROM courses;
+```
+- `MAX(students_count)`: This part of the query calculates the maximum value in the "students_count" column of the "courses" table.
+- `MAX(price)`: This part calculates the maximum value in the "price" column of the "courses" table.
+- So, it is calculating the maximum value for both the "students_count" and "price" columns independently. It is not calculating the sum of all prices; rather, it identifies the highest value present in the "price" column.
+
+- Calculates the total duration of courses with the type "MARKETING" from the "Courses" table.
+```
 SELECT SUM(duration) AS total_duration FROM courses WHERE type = "MARKETING";
 ```
 
