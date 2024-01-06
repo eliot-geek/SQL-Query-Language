@@ -1,6 +1,6 @@
 # SQL Structured Query Language
 
-Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
+> Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
 
 ## **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
