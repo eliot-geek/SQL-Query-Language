@@ -255,14 +255,31 @@ mysql> SELECT Courses.name AS course_name,
 
 ## **Grouping**: Master data grouping techniques for effective analysis.
 
-```
-SELECT type, AVG(price) FROM Courses GROUP BY type;
+- The `GROUP BY` clause is used to group rows that have the same values in specified columns into summary rows, like `total` or `average`.
+- It is often used in combination with aggregate functions such as `COUNT()`, `SUM()`, `AVG()`, `MAX()`, or `MIN()` to perform calculations on each group of rows. 
 
+- Selects the course type and calculates the average price for each type from the "Courses" table
+```sql
+SELECT type, AVG(price) FROM Courses GROUP BY type;
+```
+- Retrieves the names of teachers and the count of courses each teacher has, joining the Courses and Teachers tables and grouping the results by the unique identifier of each teacher.
+- Select the teacher's name and the count of courses they teach
+- From the Courses table, join with the Teachers table using the teacher_id
+- Group the result by the unique identifier of each teacher (Teachers.id)
+```sql
 mysql> SELECT Teachers.name AS teacher_name, COUNT(*) AS course_count FROM Courses
     -> JOIN Teachers ON Teachers.id = Courses.teacher_id
     -> GROUP BY Teachers.id;
+```
 
+- Retrieves the names of teachers along with the count of courses each teacher has, grouped by the unique identifier of each teacher, and orders the results by the count of courses in descending order, limiting the output to the top 5 teachers.
+- Selects the names of teachers and the count of courses each teacher has
+- Joins the Courses and Teachers tables using the teacher_id column
+- Groups the results by the unique identifier of each teacher
+- Orders the results by the count of courses in descending order
+- Limits the output to the top 5 results
 
+```sql
 mysql> SELECT Teachers.name AS teacher_name, COUNT(*) AS course_count FROM Courses
     -> JOIN Teachers ON Teachers.id = Courses.teacher_id
     -> GROUP BY Teachers.id
