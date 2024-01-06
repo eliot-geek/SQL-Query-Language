@@ -211,10 +211,22 @@ SELECT SUM(duration) AS total_duration FROM courses WHERE type = "MARKETING";
 
 ### **Relationships and Table Joins**: Understand relationships and perform table joins for comprehensive data retrieval.
 
-```
+- Retrieve the details of the first course from the "Courses" table.
+```sql
 SELECT * FROM courses LIMIT 1\G
+```
+- Retrieve the details of the teacher with ID 1 from the "Teachers" table.
+```sql
 SELECT * FROM teachers WHERE id = 1;
+```
+- Retrieve the price, course name, and teacher name for courses of type "MANAGEMENT" from the "Courses" and "Teachers" tables.
+- The `JOIN` clause is used to combine rows from two or more tables based on a related column between them.
+- `Teachers` is the name of the second table involved in the join.
+- `Courses.teacher_id` is the column in the `Courses` table used for the join.
+- `Teachers.id` is the column in the `Teachers` table used for the join.
+- The `ON` clause establishes the relationship or condition for matching rows between the tables during the join operation. It ensures that only rows meeting the specified condition are combined in the result set.
 
+```sql
 mysql> SELECT price,
     -> Courses.name AS course_name,
     -> Teachers.name AS teacher_name
@@ -222,7 +234,18 @@ mysql> SELECT price,
     -> JOIN Teachers ON Teachers.id = Courses.teacher_id
     -> WHERE type="MANAGEMENT"
     -> ORDER BY price LIMIT 4;
+```
+- Selects the name of courses and corresponding students who have subscriptions for courses of type "DESIGN"
+- `SELECT Courses.name AS course_name, Students.name AS student_name`: This part of the query selects the `name` column from the `Courses` table, aliasing it as `course_name`, and the `name` column from the `Students` table, aliasing it as `student_name`.
+- `FROM Courses`: Specifies the table from which to select data, in this case, the `Courses` table.
+- `JOIN Subscriptions ON Courses.id = Subscriptions.course_id`: This is a join condition, specifying that rows from the `Courses` table should be matched with rows from the `Subscriptions` table where the `id` column in `Courses` is equal to the `course_id` column in `Subscriptions`.
+- `JOIN Students ON Students.id = Subscriptions.student_id`: Another join condition, specifying that rows from the previously joined result (combining `Courses` and `Subscriptions`) should be matched with rows from the `Students` table where the `id` column in `Students` is equal to the `student_id` column in `Subscriptions`.
+- `WHERE type = "DESIGN"`: This is a filter condition, limiting the results to rows where the value in the `type` column of the `Courses` table is equal to "DESIGN."
+- `ORDER BY subscription_date`: Orders the result set based on the `subscription_date` column.
+- `ORDER BY subscription_date`: Orders the result set based on the `subscription_date` column.
+- The result will include the names of the courses and students, ordered by subscription date, and limited to 10 rows.
 
+```sql
 mysql> SELECT Courses.name AS course_name,
     -> Students.name AS student_name
     -> FROM Courses
