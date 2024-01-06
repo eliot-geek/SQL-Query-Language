@@ -2,9 +2,7 @@
 
 Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
 
-## Topics Covered
-
-### **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
+## **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
 
 ```
 VARCHAR     - Variable-length text.
@@ -25,7 +23,7 @@ DESCRIBE subscriptions;
 
 ```
 
-### **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
+## **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
 
 ```sql
 SELECT column1, column2, ...
@@ -93,7 +91,7 @@ SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMIN
 ```sql
 SELECT type FROM courses;
 ```
-### **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
+## **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
   
 - Displays unique values from the "type" column in "courses," removing duplicates.
 ```sql
@@ -105,7 +103,7 @@ SELECT DISTINCT type FROM courses;
 SELECT DISTINCT duration FROM courses;
 ```
 
-### **UNION Query**: is used to combine the result sets of two or more SELECT statements. It is used to merge the rows from different tables or queries into a single result set.  
+## **UNION Query**: is used to combine the result sets of two or more SELECT statements. It is used to merge the rows from different tables or queries into a single result set.  
 - It's important to note that `UNION` eliminates duplicate rows from the final result set. If you want to include duplicate rows, you can use the `UNION ALL` operator instead.
 - `UNION ALL` includes all rows, even if they are duplicates.
 
@@ -132,7 +130,7 @@ mysql> SELECT name FROM students
 SELECT age, name FROM Teachers UNION ALL SELECT age, name FROM students;
 ```
 
-### **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
+## **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
 
 - Selects the salary and the calculated annual salary (salary * 12) from the "Teachers" table for the first 10 records.
 ```sql
@@ -209,7 +207,7 @@ SELECT AVG(duration), MAX(students_count), MAX(price) FROM courses;
 SELECT SUM(duration) AS total_duration FROM courses WHERE type = "MARKETING";
 ```
 
-### **Relationships and Table Joins**: Understand relationships and perform table joins for comprehensive data retrieval.
+## **Relationships and Table Joins**: Understand relationships and perform table joins for comprehensive data retrieval.
 
 - Retrieve the details of the first course from the "Courses" table.
 ```sql
@@ -255,7 +253,7 @@ mysql> SELECT Courses.name AS course_name,
     -> ORDER BY subscription_date LIMIT 10;
 ```
 
-### **Grouping**: Master data grouping techniques for effective analysis.
+## **Grouping**: Master data grouping techniques for effective analysis.
 
 ```
 SELECT type, AVG(price) FROM Courses GROUP BY type;
@@ -271,7 +269,7 @@ mysql> SELECT Teachers.name AS teacher_name, COUNT(*) AS course_count FROM Cours
     -> ORDER BY COUNT(*) DESC LIMIT 5;
 ```
 
-### **Data Modification**: Explore data modification operations to update and manipulate database content.
+## **Data Modification**: Explore data modification operations to update and manipulate database content.
 
 ```
 INSERT INTO Courses (name, duration, price, teacher_id) VALUES("SQL", 2, 99999, 2);
@@ -288,13 +286,13 @@ SELECT type, AVG(price) FROM Courses GROUP BY type;
 
 ```
 
-### **Subqueries**: Learn the concept of subqueries for advanced data retrieval.
+## **Subqueries**: Learn the concept of subqueries for advanced data retrieval.
 
 ```
 SELECT name, (SELECT COUNT(*) FROM Teachers WHERE Teachers.age > Students.age) AS older_count FROM Students ORDER BY older_count DESC LIMIT 10;
 ```
 
-### **Declaration and Modification of Data Structure**: Understand data structure declaration and modification.
+## **Declaration and Modification of Data Structure**: Understand data structure declaration and modification.
 
 ```
 mysql> CREATE TABLE PurchaseList (
