@@ -2,7 +2,8 @@
 
 > Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
 
-## **Database Structure, DESCRIBE Query**: Explore the database structure and utilize the DESCRIBE query.
+## **Database Structure, DESCRIBE Query**
+### Explore the database structure and utilize the DESCRIBE query.
 
 ```
 VARCHAR     - Variable-length text.
@@ -23,7 +24,8 @@ DESCRIBE subscriptions;
 
 ```
 
-## **Data Selection and Filtering, SELECT Query**: Learn the essentials of selecting and filtering data using the SELECT query.
+## **Data Selection and Filtering, SELECT Query**
+### Learn the essentials of selecting and filtering data using the SELECT query.
 
 ```sql
 SELECT column1, column2, ...
@@ -90,7 +92,8 @@ SELECT name, duration, price, students_count FROM courses WHERE type="PROGRAMMIN
 ```sql
 SELECT type FROM courses;
 ```
-## **DISTINCT Query**: Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
+## **DISTINCT Query**
+### Retrieves unique values from a specified column in a table, eliminating duplicates and providing a distinct list of values.
   
 > - Displays unique values from the "type" column in "courses," removing duplicates.
 ```sql
@@ -102,7 +105,8 @@ SELECT DISTINCT type FROM courses;
 SELECT DISTINCT duration FROM courses;
 ```
 
-## **UNION Query**: is used to combine the result sets of two or more SELECT statements. It is used to merge the rows from different tables or queries into a single result set.  
+## **UNION Query**
+### UNION is used to combine the result sets of two or more SELECT statements. It is used to merge the rows from different tables or queries into a single result set.  
 > - It's important to note that `UNION` eliminates duplicate rows from the final result set. If you want to include duplicate rows, you can use the `UNION ALL` operator instead.
 > - `UNION ALL` includes all rows, even if they are duplicates.
 > - The basic syntax for a `UNION` operation looks like this:
@@ -128,7 +132,8 @@ mysql> SELECT name FROM students
 SELECT age, name FROM Teachers UNION ALL SELECT age, name FROM students;
 ```
 
-## **Functions and Expressions, Data Aggregation**: Dive into functions, expressions, and data aggregation techniques.
+## **Functions and Expressions, Data Aggregation**
+### Dive into functions, expressions, and data aggregation techniques.
 
 > - Selects the salary and the calculated annual salary (salary * 12) from the "Teachers" table for the first 10 records.
 ```sql
@@ -205,7 +210,8 @@ SELECT AVG(duration), MAX(students_count), MAX(price) FROM courses;
 SELECT SUM(duration) AS total_duration FROM courses WHERE type = "MARKETING";
 ```
 
-## **Relationships and Table Joins**: Understand relationships and perform table joins for comprehensive data retrieval.
+## **Relationships and Table Joins**
+### Understand relationships and perform table joins for comprehensive data retrieval.
 
 > - Retrieve the details of the first course from the "Courses" table.
 ```sql
@@ -251,7 +257,8 @@ mysql> SELECT Courses.name AS course_name,
     -> ORDER BY subscription_date LIMIT 10;
 ```
 
-## **Grouping**: Master data grouping techniques for effective analysis.
+## **Grouping**
+### Master data grouping techniques for effective analysis.
 
 > - The `GROUP BY` clause is used to group rows that have the same values in specified columns into summary rows, like `total` or `average`.
 > - It is often used in combination with aggregate functions such as `COUNT()`, `SUM()`, `AVG()`, `MAX()`, or `MIN()` to perform calculations on each group of rows. 
@@ -284,53 +291,56 @@ mysql> SELECT Teachers.name AS teacher_name, COUNT(*) AS course_count FROM Cours
     -> ORDER BY COUNT(*) DESC LIMIT 5;
 ```
 
-## **Data Modification**: Explore data modification operations to update and manipulate database content.
+## **Data Modification**
+### Explore data modification operations to update and manipulate database content.
 
 > - Inserts a new record into the Courses table with specific values for name, duration, price, and teacher_id.
-```
+```sql
 INSERT INTO Courses (name, duration, price, teacher_id) VALUES("SQL", 2, 99999, 2);
 ```
 > - Retrieves all columns from the Courses table where the name is "SQL" to verify the insertion.
-```
+```sql
 SELECT * FROM Courses WHERE name = "SQL";
 ```
 
 > - Updates the price of the course with id 46 to a new value.
-```
+```sql
 UPDATE Courses SET price = 90000 WHERE id = 46;
 ```
 > - Retrieves all columns from the Courses table where the name is "SQL" after the price update.
-```
+```sql
 SELECT * FROM Courses WHERE name = "SQL";
 ```
 > - Retrieves the type and average price for each type from the Courses table.
-```
+```sql
 SELECT type, AVG(price) FROM Courses GROUP BY type;
 ```
 > - Updates the price of courses with type "DESIGN" by reducing it to 95% of its current value.
-```
+```sql
 UPDATE Courses SET price = price * 0.95 WHERE type = "DESIGN";
 ```
 > Query OK, 16 rows affected (0.01 sec)
 > Rows matched: 16  Changed: 16  Warnings: 0
 
 > - Retrieves the type and calculates the average price for each type from the Courses table.
-```
+```sql
 SELECT type, AVG(price) FROM Courses GROUP BY type;
 ```
 
-## **Subqueries**: Learn the concept of subqueries for advanced data retrieval.
+## **Subqueries**
+### Learn the concept of subqueries for advanced data retrieval.
 
 > - Retrieves the name of students and counts the number of teachers with an age greater than the age of each student, then orders the result by the count in descending order and limits the output to the top 10 records.
-```
+```sql
 SELECT name, (SELECT COUNT(*) FROM Teachers WHERE Teachers.age > Students.age) AS older_count FROM Students ORDER BY older_count DESC LIMIT 10;
 ```
 
-## **Declaration and Modification of Data Structure**: Understand data structure declaration and modification.
+## **Declaration and Modification of Data Structure**
+### Understand data structure declaration and modification.
 
 > - Creates a new table named PurchaseList with columns: student_name (VARCHAR with a maximum length of 500 characters), course_name (VARCHAR with a maximum length of 500 characters), price (integer), and subscription_date (datetime).
 
-```
+```sql
 mysql> CREATE TABLE PurchaseList (
     -> student_name VARCHAR(500),
     -> course_name VARCHAR(500),
@@ -338,7 +348,7 @@ mysql> CREATE TABLE PurchaseList (
     -> subscription_date DATETIME);
 ```
 > - Displays the list of tables in the current database to verify the creation of the PurchaseList table.
-```
+```sql
 SHOW TABLES;
 ```
 > - Retrieves information about students, courses, subscription dates, and prices.
@@ -349,7 +359,7 @@ SHOW TABLES;
 > - Further joins the result from the previous JOIN with the Students table.
 > - The JOIN condition specifies that the "id" in the Students table should match the "student_id" in the Subscriptions table.
 > - This establishes a connection between students, courses, and subscriptions.
-```
+```sql
 mysql> SELECT Students.name AS student_name, Courses.name AS course_name,
     -> Subscription_date, price FROM Courses
     -> JOIN Subscriptions ON Subscriptions.course_id = Courses.id
@@ -357,7 +367,7 @@ mysql> SELECT Students.name AS student_name, Courses.name AS course_name,
 ```
 > - Inserts data into the PurchaseList table, including columns for student_name, course_name, subscription_date, and price.
 > - The data is selected from a combination of the Courses, Subscriptions, and Students tables using JOIN operations.
-```
+```sql
 mysql> INSERT INTO PurchaseList(student_name, course_name, subscription_date, price)
     -> SELECT Students.name AS student_name, Courses.name AS course_name,
     -> Subscription_date, price FROM Courses
@@ -370,31 +380,31 @@ mysql> INSERT INTO PurchaseList(student_name, course_name, subscription_date, pr
 
 
 > - Retrieves the count of records in the PurchaseList table.
-```
+```sql
 SELECT COUNT(*) FROM PurchaseList;
 ```
 > - Retrieves the first 10 records from the PurchaseList table.
-```
+```sql
 SELECT * FROM PurchaseList LIMIT 10;
 ```
 > - Describes the structure of the Courses table.
-```
+```sql
 DESCRIBE Courses;
 ```
 > - The `ALTER TABLE` statement is used to modify the structure of the "Courses" table.
 > - The `ALTER TABLE` statement with the `ADD COLUMN` clause is used to modify the schema of the "Courses" table by adding a new column to store information about the price per hour for each course.
 > - Adds a new column named "price_per_hour" with a data type of FLOAT to the Courses table.
-```
+```sql
 ALTER TABLE Courses ADD COLUMN price_per_hour FLOAT;
 ```
 > - Describes the updated structure of the Courses table after adding the "price_per_hour" column.
-```
+```sql
 DESCRIBE Courses;
 ```
 
 > - Updates the "price_per_hour" column in the Courses table by calculating the price per hour for each course.
 > - The calculation is based on the existing "price" and "duration" columns.
-```
+```sql
 UPDATE Courses SET price_per_hour = price / duration;
 ```
 > - Query OK, 31 rows affected (0.00 sec)
@@ -403,7 +413,7 @@ UPDATE Courses SET price_per_hour = price / duration;
 
 > - Retrieves the first 10 records from the Courses table, displaying the updated information after the calculation.
 > - The "\G" at the end is used to display the results in a more readable vertical format.
-```
+```sql
 SELECT * FROM Courses LIMIT 10\G;
 ```
 
