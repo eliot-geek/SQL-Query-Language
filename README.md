@@ -286,28 +286,49 @@ mysql> SELECT Teachers.name AS teacher_name, COUNT(*) AS course_count FROM Cours
 
 ## **Data Modification**: Explore data modification operations to update and manipulate database content.
 
+> - Inserts a new record into the Courses table with specific values for name, duration, price, and teacher_id.
 ```
 INSERT INTO Courses (name, duration, price, teacher_id) VALUES("SQL", 2, 99999, 2);
+```
+> - Retrieves all columns from the Courses table where the name is "SQL" to verify the insertion.
+```
 SELECT * FROM Courses WHERE name = "SQL";
+```
+
+> - Updates the price of the course with id 46 to a new value.
+```
 UPDATE Courses SET price = 90000 WHERE id = 46;
+```
+> - Retrieves all columns from the Courses table where the name is "SQL" after the price update.
+```
 SELECT * FROM Courses WHERE name = "SQL";
+```
+> - Retrieves the type and average price for each type from the Courses table.
+```
 SELECT type, AVG(price) FROM Courses GROUP BY type;
-
+```
+> - Updates the price of courses with type "DESIGN" by reducing it to 95% of its current value.
+```
 UPDATE Courses SET price = price * 0.95 WHERE type = "DESIGN";
-Query OK, 16 rows affected (0.01 sec)
-Rows matched: 16  Changed: 16  Warnings: 0
+```
+> Query OK, 16 rows affected (0.01 sec)
+> Rows matched: 16  Changed: 16  Warnings: 0
 
+> - Retrieves the type and calculates the average price for each type from the Courses table.
+```
 SELECT type, AVG(price) FROM Courses GROUP BY type;
-
 ```
 
 ## **Subqueries**: Learn the concept of subqueries for advanced data retrieval.
 
+> - Retrieves the name of students and counts the number of teachers with an age greater than the age of each student, then orders the result by the count in descending order and limits the output to the top 10 records.
 ```
 SELECT name, (SELECT COUNT(*) FROM Teachers WHERE Teachers.age > Students.age) AS older_count FROM Students ORDER BY older_count DESC LIMIT 10;
 ```
 
 ## **Declaration and Modification of Data Structure**: Understand data structure declaration and modification.
+
+> - Creates a new table named PurchaseList with columns: student_name (VARCHAR with a maximum length of 500 characters), course_name (VARCHAR with a maximum length of 500 characters), price (integer), and subscription_date (datetime).
 
 ```
 mysql> CREATE TABLE PurchaseList (
@@ -315,34 +336,74 @@ mysql> CREATE TABLE PurchaseList (
     -> course_name VARCHAR(500),
     -> price INT,
     -> subscription_date DATETIME);
-
-show tables;
-
-
+```
+> - Displays the list of tables in the current database to verify the creation of the PurchaseList table.
+```
+SHOW TABLES;
+```
+> - Retrieves information about students, courses, subscription dates, and prices.
+> - The alias "student_name" is used for the "name" column in the Students table, and "course_name" for the "name" column in the Courses table.
+> - The SELECT statement combines data from the Courses, Subscriptions, and Students tables using JOIN operations.
+> - Joins the Subscriptions table with the Courses table based on the relationship between "course_id" in Subscriptions and "id" in Courses.
+> - The JOIN condition specifies that the "course_id" in the Subscriptions table should match the "id" in the Courses table.
+> - Further joins the result from the previous JOIN with the Students table.
+> - The JOIN condition specifies that the "id" in the Students table should match the "student_id" in the Subscriptions table.
+> - This establishes a connection between students, courses, and subscriptions.
+```
 mysql> SELECT Students.name AS student_name, Courses.name AS course_name,
     -> Subscription_date, price FROM Courses
     -> JOIN Subscriptions ON Subscriptions.course_id = Courses.id
     -> JOIN Students ON Students.id = Subscriptions.student_id;
-
+```
+> - Inserts data into the PurchaseList table, including columns for student_name, course_name, subscription_date, and price.
+> - The data is selected from a combination of the Courses, Subscriptions, and Students tables using JOIN operations.
+```
 mysql> INSERT INTO PurchaseList(student_name, course_name, subscription_date, price)
     -> SELECT Students.name AS student_name, Courses.name AS course_name,
     -> Subscription_date, price FROM Courses
     -> JOIN Subscriptions ON Subscriptions.course_id = Courses.id
     -> JOIN Students ON Students.id = Subscriptions.student_id;
-Query OK, 271 rows affected (0.01 sec)
-Records: 271  Duplicates: 0  Warnings: 0
+```
 
+> Query OK, 271 rows affected (0.01 sec)
+> Records: 271  Duplicates: 0  Warnings: 0
+
+
+> - Retrieves the count of records in the PurchaseList table.
+```
 SELECT COUNT(*) FROM PurchaseList;
+```
+> - Retrieves the first 10 records from the PurchaseList table.
+```
 SELECT * FROM PurchaseList LIMIT 10;
+```
+> - Describes the structure of the Courses table.
+```
 DESCRIBE Courses;
+```
+> - The `ALTER TABLE` statement is used to modify the structure of the "Courses" table.
+> - The `ALTER TABLE` statement with the `ADD COLUMN` clause is used to modify the schema of the "Courses" table by adding a new column to store information about the price per hour for each course.
+> - Adds a new column named "price_per_hour" with a data type of FLOAT to the Courses table.
+```
 ALTER TABLE Courses ADD COLUMN price_per_hour FLOAT;
+```
+> - Describes the updated structure of the Courses table after adding the "price_per_hour" column.
+```
 DESCRIBE Courses;
+```
 
-UPDATE Courses SET price_per_hour = price/duration;
-Query OK, 31 rows affected (0.00 sec)
-Rows matched: 47  Changed: 31  Warnings: 0
+> - Updates the "price_per_hour" column in the Courses table by calculating the price per hour for each course.
+> - The calculation is based on the existing "price" and "duration" columns.
+```
+UPDATE Courses SET price_per_hour = price / duration;
+```
+> - Query OK, 31 rows affected (0.00 sec)
+> - Rows matched: 47  Changed: 31  Warnings: 0
 
-SELECT * FROM Courses LIMIT 10\G
 
+> - Retrieves the first 10 records from the Courses table, displaying the updated information after the calculation.
+> - The "\G" at the end is used to display the results in a more readable vertical format.
+```
+SELECT * FROM Courses LIMIT 10\G;
 ```
 
