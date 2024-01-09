@@ -1,7 +1,7 @@
 # Homeworks
 
 ## `Homework 1` - Data selection and filtering, SELECT query
-### 1. Write a request to select students in the order of their registration.
+### 1. Write a request to select students in the order of their registration
 ![](images/22.png)
 
 ### 2. Write a request to select the 5 most expensive courses, which have more than 4 students, and which last more than 10 hours.
