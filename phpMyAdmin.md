@@ -1,6 +1,6 @@
 # phpMyAdmin Requests
 
--  Selects all columns from the 'good' table
+- Selects all columns from the 'good' table
 ```sql
 SELECT * FROM `good`;
 ```
