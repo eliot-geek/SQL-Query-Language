@@ -73,3 +73,36 @@ SELECT * FROM `user` WHERE `name`='Лашманов Артур';
 SELECT * FROM `order` WHERE `creation_date` BETWEEN '2019-07-01' AND '2019-07-31';
 ```
 
+## Practice on the topic 
+
+## List of Goods Priced Above 800 Rubles
+>- Retrieve the list of goods priced above 800 rubles.
+
+```sql
+SELECT *
+FROM `good`
+WHERE `price` > 800;
+```
+
+## List of Out-of-Stock Goods
+>- Retrieve the list of goods that have run out of stock.
+
+```sql
+SELECT *
+FROM `good`
+WHERE `count` = 0;
+```
+
+## Order and User IDs for Paid Orders on April 1, 2016
+>- Retrieve the order ID (`id`) and user ID (`user_id`) for paid orders on April 1, 2016. Paid orders are those with a `status_id` equal to 7. It's crucial to consider the date boundaries using comparison operators.
+>- In this case, use the "greater than or equal to" operator before '2016-04-01' and the "strictly less than" operator before '2016-04-02'. This ensures that the query includes orders created from 00:00:00 on April 1, 2016 (inclusive) to 00:00:00 on April 2, 2016 (exclusive).
+
+```sql
+SELECT `id`, `user_id`
+FROM `order`
+WHERE
+    `status_id` = 7 AND
+    `creation_date` >= '2016-04-01' AND
+    `creation_date` < '2016-04-02';
+```
+
