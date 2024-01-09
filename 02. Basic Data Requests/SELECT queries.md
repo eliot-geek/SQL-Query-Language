@@ -15,8 +15,6 @@
 
 ![Database](../images/select05.png)
 
-![Database](../images/2.png)
-
 ## Displaying Individual Fields of a Table
 Exploring how to output specific fields of a table.
 
