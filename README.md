@@ -1,4 +1,4 @@
-# SQL Structured Query Language
+# SQL Structured Query Language (MySQL 8.0 Command Line Client - Unicode)
 
 > Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
 
