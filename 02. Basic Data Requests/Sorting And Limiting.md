@@ -1,0 +1,28 @@
+# Sorting And Limiting The Number Of Results
+
+## Video Topic
+![Sort](../images/sort00.png)
+
+## Sorting in Ascending Order
+![Sort](../images/sort01.png)
+
+## Sorting in Descending Order
+![Sort](../images/sort02.png)
+
+## Multiple Sorting
+![Sort](../images/sort03.png)
+
+## Limiting the Number of Records
+![Sort](../images/sort04.png)
+
+## Record with a Small Value
+![Sort](../images/sort05.png)
+
+## Paginated navigation
+![Sort](../images/sort06.png)
+
+![Sort](../images/sort08.png)
+
+![Sort](../images/sort07.png)
+
+## 
