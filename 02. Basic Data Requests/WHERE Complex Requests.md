@@ -132,7 +132,7 @@ FROM good
 WHERE name LIKE '%манго%' AND name NOT LIKE '%айс%';
 ```
 
-```
+```sql
 SELECT
     `id`,
     `name`
