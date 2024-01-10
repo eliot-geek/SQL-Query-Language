@@ -1,6 +1,6 @@
 # WHERE Operator And Complex Conditions
 
-## Тема 
+## Theme 
 ![Where](../images/where09.png)
 
 ![Where](../images/where10.png)
@@ -10,12 +10,12 @@
 
 ![Where](../images/where11.png)
 
-## Маски
+## Masks
 ![Where](../images/where13.png)
 
 ![Where](../images/where14.png)
 
-## Сравнение с NULL
+## Comparison with NULL
 ![Where](../images/where15.png)
 
 ![Where](../images/where16.png)
@@ -24,29 +24,29 @@
 
 ![Where](../images/where18.png)
 
-## Объединение нескольких условий
+## Combining several conditions
 ![Where](../images/where19.png)
 
 ![Where](../images/where20.png)
 
-## Условия
+## Conditions
 ![Where](../images/where21.png)
 
 ![Where](../images/where22.png)
 
-## Одно из условий
+## One Of The Conditions
 ![Where](../images/where23.png)
 
 ![Where](../images/where24.png)
 
 ![Where](../images/where25.png)
 
-## Группа значений
+## Group Of Values
 ![Where](../images/where26.png)
 
 ![Where](../images/where27.png)
 
-## Круглые скобки
+## Parentheses
 ![Where](../images/where28.png)
 
 ![Where](../images/where29.png)
