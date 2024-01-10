@@ -46,7 +46,7 @@ To include all registrations on December 31, 2018, in the date range, you should
 > SQL query to select dates between two dates
 ![Where](../images/where30.png)
 
-![SQL query](https://stackoverflow.com/questions/5125076/sql-query-to-select-dates-between-two-dates/22081848#22081848)
+[SQL query](https://stackoverflow.com/questions/5125076/sql-query-to-select-dates-between-two-dates/22081848#22081848)
 
 
 ## Analysis of Query Variations in phpMyAdmin
