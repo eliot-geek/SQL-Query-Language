@@ -75,7 +75,7 @@ SELECT * FROM `order` WHERE `creation_date` BETWEEN '2019-07-01' AND '2019-07-31
 
 ## Practice on the topic 
 
-## List of Goods Priced Above 800 Rubles
+## List Of Goods Priced Above 800 Rubles
 >- Retrieve the list of goods priced above 800 rubles.
 
 ```sql
@@ -84,7 +84,7 @@ FROM `good`
 WHERE `price` > 800;
 ```
 
-## List of Out-of-Stock Goods
+## List Of Out Of Stock Goods
 >- Retrieve the list of goods that have run out of stock.
 
 ```sql
