@@ -1,6 +1,11 @@
 # SQL Structured Query Language 
 # MySQL Workbench
+
+![MySQL](../images/MySQLWorkbench.png)
+
 # MySQL 8.0 Command Line Client - Unicode
+
+![MySQL](../images/MySQLCommandLine.png)
 
 > Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
 
