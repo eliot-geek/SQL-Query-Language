@@ -5,7 +5,7 @@
 
 # MySQL 8.0 Command Line Client - Unicode
 
-![MySQL](../images/MySQLCommandLine.png)
+![MySQL](/images/MySQLCommandLine.png)
 
 > Welcome to the SQL Training repository! This repository is dedicated to providing comprehensive training materials and resources for mastering the Structured Query Language (SQL).
 
@@ -428,8 +428,8 @@ SELECT * FROM Courses LIMIT 10\G;
 
 ## [timeweb](https://timeweb.com/ru/)
 
-![timeweb](../images/timeweb.png)
+![timeweb](/images/timeweb.png)
 
 ## phpMyAdmin
 
-![phpMyAdmin](../images/phpMyAdmin.png)
+![phpMyAdmin](/images/phpMyAdmin.png)
