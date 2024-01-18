@@ -1,7 +1,7 @@
 # SQL Structured Query Language 
 # MySQL Workbench
 
-![MySQL](../images/MySQLWorkbench.png)
+![MySQL](/images/MySQLWorkbench.png)
 
 # MySQL 8.0 Command Line Client - Unicode
 
