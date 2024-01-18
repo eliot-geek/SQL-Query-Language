@@ -420,7 +420,16 @@ UPDATE Courses SET price_per_hour = price / duration;
 
 > - Retrieves the first 10 records from the Courses table, displaying the updated information after the calculation.
 > - The "\G" at the end is used to display the results in a more readable vertical format.
+
 ```sql
 SELECT * FROM Courses LIMIT 10\G;
 ```
 
+
+## [timeweb](https://timeweb.com/ru/)
+
+![timeweb](../images/timeweb.png)
+
+## phpMyAdmin
+
+![phpMyAdmin](../images/phpMyAdmin.png)
