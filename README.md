@@ -424,6 +424,3 @@ UPDATE Courses SET price_per_hour = price / duration;
 ```sql
 SELECT * FROM Courses LIMIT 10\G;
 ```
-## phpMyAdmin
-
-![phpMyAdmin](/images/phpMyAdmin.png)
