@@ -28,7 +28,6 @@ DESCRIBE courses;
 DESCRIBE teachers;
 DESCRIBE students;
 DESCRIBE subscriptions;
-
 ```
 
 ## **Data Selection and Filtering, SELECT Query**
