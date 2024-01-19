@@ -424,12 +424,6 @@ UPDATE Courses SET price_per_hour = price / duration;
 ```sql
 SELECT * FROM Courses LIMIT 10\G;
 ```
-
-
-## [timeweb](https://timeweb.com/ru/)
-
-![timeweb](/images/timeweb.png)
-
 ## phpMyAdmin
 
 ![phpMyAdmin](/images/phpMyAdmin.png)
